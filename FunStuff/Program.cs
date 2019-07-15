@@ -6,7 +6,12 @@ namespace FunStuff
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var app = new App();
+            app.Run();
+
+            Console.WriteLine("\n\n-----------------------------------");
+            Console.WriteLine("End of Demo. Press any key to exit.");
+            Console.ReadKey();
         }
     }
 }
