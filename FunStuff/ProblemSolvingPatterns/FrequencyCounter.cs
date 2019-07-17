@@ -6,10 +6,10 @@ namespace FunStuff.ProblemSolvingPatterns
 {
     public class FrequencyCounter
     {
-        public bool Same(string s1, string s2)
+        public bool Anagram(string s1, string s2)
         {
             if (s1.Length != s2.Length) return false;
-            foreach(var c in s1)
+            foreach (var c in s1)
             {
                 if (!s2.Contains(c))
                 {
@@ -17,6 +17,16 @@ namespace FunStuff.ProblemSolvingPatterns
                 }
                 var index = s2.IndexOf(c);
                 s2 = s2.Remove(index, 1);
+            }
+            return true;
+        }
+        public bool AreThereDuplicates(string s)
+        {
+            var checker = "";
+            foreach (var c in s)
+            {
+                if (checker.Contains(c)) return false;
+                checker += c;
             }
             return true;
         }
